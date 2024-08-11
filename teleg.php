@@ -16,8 +16,6 @@ $mess = $_POST['mess'];
 
 $token = "7263289467:AAGNreEg4nTtxrdmtcyG6-MfxStvsWTVWHM";
 
-
-
 $chat_id = "1416460800";//kerexaaa
 
 
@@ -68,9 +66,7 @@ function sendMessage($chatID, $message, $token) {
 
   curl_close($ch);
 
-  file_get_contents($url);
-
-
+  // file_get_contents($url);
 
 }
 
