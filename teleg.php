@@ -40,10 +40,6 @@ foreach($arr as $key => $value) {
 
 };
 
-
-
-
-
 function sendMessage($chatID, $message, $token) { 
 
   $url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $chatID;  
@@ -66,7 +62,7 @@ function sendMessage($chatID, $message, $token) {
 
   curl_close($ch);
 
-  // file_get_contents($url);
+  file_get_contents($url);  
 
 }
 
@@ -84,15 +80,11 @@ sendMessage($chat_id, $txt, $token);
 
 
 
-//mgoroshenko
+// @lutsik404
 
-// $chat_id = "5787739653";
+$chat_id = "522061139";
 
-// sendMessage($chat_id, $txt, $token);
-
-
-
-
+sendMessage($chat_id, $txt, $token);
 
 //$sendToTelegram = fopen("https://api.telegram.org/{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
