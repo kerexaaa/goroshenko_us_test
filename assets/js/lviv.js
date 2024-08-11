@@ -295,7 +295,7 @@ $(document).ready(function () {
 
             type: "POST",
 
-            url: "../php/teleg.php",
+            url: "./../php/teleg.php",
 
             data: $(this).serialize()
 
