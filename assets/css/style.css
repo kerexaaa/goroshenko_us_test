@@ -7681,7 +7681,6 @@ span.pay__num {
 
     .section.hb {
         overflow: unset;
-        padding-bottom: 80px;
     }
 
     .section__right .button:after {
@@ -8023,6 +8022,10 @@ span.pay__num {
 @media (max-width: 576px) {
     .ellipse img {
         max-width: 55px;
+    }
+
+    .first__visit-wrapper {
+        margin-top: 50px;
     }
 
     .cabinet-sections__wrapper {
@@ -8784,7 +8787,8 @@ span.pay__num {
     }
 
     .hb .banner-title {
-        margin: 0;
+        margin: 0 0 8px;
+        gap: 4px;
     }
 
     .hb .get-sale-button {
@@ -8923,8 +8927,11 @@ span.pay__num {
     }
     #price,
     #reviev {
-        padding-top: 90px;
+        padding-top: 35px;
         margin-top: -90px;
+    }
+    #reviev {
+        padding-top: 90px;
     }
     .EWBookingWidgetTrigger {
         bottom: 20px !important;
@@ -9265,7 +9272,7 @@ span.pay__num {
         display: flex;
         /* align-items: center; */
         justify-content: space-between;
-        gap: 2.5vh;
+        gap: 12px;
         flex-direction: column;
         margin: 2.5vh 0;
     }
