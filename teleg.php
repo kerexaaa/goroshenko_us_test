@@ -16,9 +16,7 @@ $mess = $_POST['mess'];
 
 $token = "7263289467:AAGNreEg4nTtxrdmtcyG6-MfxStvsWTVWHM";
 
-$chat_id = "1416460800";//kerexaaa
-
-
+$chat_id = "1344726205";//mgoroshenko
 
 $arr = array(
 

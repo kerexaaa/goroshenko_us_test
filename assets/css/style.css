@@ -935,7 +935,7 @@ strong {
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
-    gap: 12px;
+    gap: 20px;
     flex-direction: column;
     margin:40px 0;
 }
@@ -1132,6 +1132,7 @@ p.title__creator::after {
 .skillsetSwiper .swiper-slide {
     text-align: center;
     font-size: 18px;
+    background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1139,7 +1140,6 @@ p.title__creator::after {
 
 .skillsetSwiper .swiper-slide img{
     width: 80%;
-    height: 100%;
     object-fit: contain;
 }
 
@@ -1218,7 +1218,7 @@ h2 {
 
 .banner-title {
     font-family: Montserrat,Arial,serif,sans-serif;
-    font-size: 40px;
+    font-size: 40px;    
     margin: 0 0 60px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1227,7 +1227,6 @@ h2 {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    gap: 20px;
 }
 
 .banner-lviv {
@@ -1239,7 +1238,7 @@ h2 {
     margin-top: 20px;
 }
 
-.sub__title {
+.banner-title .sub__title {
     font-size: 16px;
     color: #536779;
 }
@@ -1336,12 +1335,12 @@ button.button.button--primary._ptev_none.more-info {
     box-shadow: 3px 3px 15px #f5775b;
 }
 
-.buttons-wrapper {    
+.buttons-wrapper {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content:  center;
-    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .section__right .button {
@@ -4510,8 +4509,8 @@ span.pay__num {
         height: 100%;
         z-index: -100;
         /* display: flex; */
-        top: -100%;
-        left: -65%;
+        top: -108%;
+        left: -63%;
         /* background: #000; */
         transform: translate(-50%,-50%);
         /* object-position: left; */
@@ -5233,10 +5232,6 @@ span.pay__num {
     .specialist__item-title,
     .specialist__item-list {
         margin-bottom: 35px;
-    }
-
-    .home__banner .section__left {
-        margin-right: 35px;
     }
 
     .specialist__item-title {
@@ -6760,7 +6755,7 @@ span.pay__num {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 205px;
+        margin-top: 90px;
         padding: 0;
         max-height: unset;
         background: unset;
@@ -6778,7 +6773,7 @@ span.pay__num {
     }
 
     .first__visit-wrapper .section__left, .first__visit-wrapper .section__right {
-        background-color: rgba(249, 250, 251, 1) !important;
+        background: #f0f5f9 !important;
     }
 
     .first__visit-wrapper .get-sale-button {
@@ -6798,7 +6793,7 @@ span.pay__num {
     }
     
     .first__visit-wrapper .section__right {
-        margin-bottom: 40px;
+        margin-bottom: 0px;
         width: 100%;
     }
 
@@ -6838,12 +6833,13 @@ span.pay__num {
     }
 
     .first__visit-wrapper .section__left, .first__visit-wrapper .section__right {
-        background: rgba(240, 245, 249, 1);
+        background: #f0f5f9;
         padding: 30px;
     }
 
     .first__visit-wrapper .section__left {
         border-radius: 20px 20px 0 0;
+        padding-bottom: 0px;
         margin-right: 0;
     }
 
@@ -8024,10 +8020,6 @@ span.pay__num {
         max-width: 55px;
     }
 
-    .first__visit-wrapper {
-        margin-top: 50px;
-    }
-
     .cabinet-sections__wrapper {
         flex-direction: column;
         position: relative;
@@ -8787,8 +8779,7 @@ span.pay__num {
     }
 
     .hb .banner-title {
-        margin: 0 0 8px;
-        gap: 4px;
+        margin: 0;
     }
 
     .hb .get-sale-button {
@@ -8890,7 +8881,7 @@ span.pay__num {
     }
 
     .first__visit-wrapper .section__left, .first__visit-wrapper .section__right {
-        background: rgba(240, 245, 249, 1);
+        background: #f0f5f9;
         padding: 15px;
     }
 
@@ -8927,11 +8918,8 @@ span.pay__num {
     }
     #price,
     #reviev {
-        padding-top: 35px;
-        margin-top: -90px;
-    }
-    #reviev {
         padding-top: 90px;
+        margin-top: -90px;
     }
     .EWBookingWidgetTrigger {
         bottom: 20px !important;
@@ -9158,7 +9146,7 @@ span.pay__num {
         align-items: center;
         justify-content: flex-end;
         width: 100%;
-        padding: 15px 0 !important;
+        padding: 16px !important;
         margin-bottom: 17px;
     }
 
@@ -9272,7 +9260,7 @@ span.pay__num {
         display: flex;
         /* align-items: center; */
         justify-content: space-between;
-        gap: 12px;
+        gap: 2.5vh;
         flex-direction: column;
         margin: 2.5vh 0;
     }
@@ -9798,7 +9786,7 @@ span.pay__num {
         align-items: center;
         justify-content: flex-end;
         width: 100%;
-        padding: 10px 0 !important;
+        padding: 16px 0 !important;
         margin-bottom: 17px;
     }
 
@@ -9889,6 +9877,17 @@ span.pay__num {
 
     .wrapper-overflow {
         top: 6% !important;
+    }
+}
+
+@media (max-height: 710px) and (max-width: 1239px) {
+    #result .section__left .section__left-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 30px 0 !important;
+        margin-bottom: 17px;
     }
 }
 

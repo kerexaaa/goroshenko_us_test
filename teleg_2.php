@@ -1,14 +1,14 @@
 <?php
 
-/* https://api.telegram.org/bot5364775377:AAHRHPsGPlxmf6qbt74a84r_Rj-4O-4uulA/getUpdates */
+/* https://api.telegram.org/bot7263289467:AAGNreEg4nTtxrdmtcyG6-MfxStvsWTVWHM/getUpdates */
 
 $fname = $_POST['fname'];
 $rating = $_POST['rating'];
 $comment = $_POST['comment'];
 $mess = $_POST['mess'];
-$token = "5364775377:AAHRHPsGPlxmf6qbt74a84r_Rj-4O-4uulA";
+$token = "7263289467:AAGNreEg4nTtxrdmtcyG6-MfxStvsWTVWHM";
 
-$chat_id = "5350400304";//goroshenko
+$chat_id = "1344726205";//mgoroshenko
 
 $arr = array(
   'Форма: ' => $fname,
@@ -38,12 +38,8 @@ function sendMessage($chatID, $message, $token) {
 
 sendMessage($chat_id, $txt, $token);
 
-//Lamarel
-$chat_id = "1367297643";
-sendMessage($chat_id, $txt, $token);
 
-//mgoroshenko
-$chat_id = "5787739653";
+$chat_id = "522061139"; //lutsik404
 sendMessage($chat_id, $txt, $token);
 
 

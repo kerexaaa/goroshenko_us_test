@@ -49,154 +49,91 @@ $(function () {
     // date-change | price change!!!
 
     $(document).ready(() => {
-        const dateTill = document.querySelectorAll('[data-date-till]')
-        dateTill.forEach(item => {
-            item.innerHTML = '15 серпня'
-        })
         
+        const dateTill = document.querySelectorAll('[data-date-till]')
+        const months = [
+            "січня", "лютого", "березня", "квітня", "травня", "червня",
+            "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"
+          ];
+        const currentDate = new Date();
+        currentDate.setDate(currentDate.getDate() + 5);
+        const day = currentDate.getDate();
+        const month = currentDate.getMonth();
+        dateTill.forEach(item => {
+            item.innerHTML = `${day} ${months[month]}`
+        })
+
         // prices
 
         // Знижена ціна
 
         const discountPrice = document.querySelectorAll('[data-discount-price]') 
         discountPrice.forEach(item => {
-            item.innerHTML = '400₴';
+            item.innerHTML = '50$';
         })
         
         // Закреслена ціна 
 
         const oldPrice = document.querySelectorAll('[data-old-price]') 
         oldPrice.forEach(item => {
-            item.innerHTML = '1000₴';
+            item.innerHTML = '80$';
         })
         
         // Наступна консультація
 
         const nextConsultation = document.querySelectorAll('[data-next-consultation]') 
         nextConsultation.forEach(item => {
-            item.innerHTML = '900-1000₴';
+            item.innerHTML = '80$';
         })
         
         // 5 консультацій
 
         const fiveConsultations = document.querySelectorAll('[data-five-consultations]') 
         fiveConsultations.forEach(item => {
-            item.innerHTML = '4000₴';
+            item.innerHTML = '375$';
         })
         
         // 10 консультацій
 
         const tenConsultations = document.querySelectorAll('[data-ten-consultations]') 
         tenConsultations.forEach(item => {
-            item.innerHTML = '8000₴';
+            item.innerHTML = '725$';
         })
 
         // Індивідуальні нова / закреслена
 
         const individualConsults = document.querySelectorAll('[data-individual-price]') 
         individualConsults.forEach(item => {
-            item.innerHTML = '400₴';
+            item.innerHTML = '50$';
         })
 
         const oldIndividualConsults = document.querySelectorAll('[data-individual-old-price]') 
         oldIndividualConsults.forEach(item => {
-            item.innerHTML = '1000₴';
+            item.innerHTML = '80$';
         })
 
         // Сімейні консультаціїї нова / закреслена
 
         const familyConsults = document.querySelectorAll('[data-family-price]') 
         familyConsults.forEach(item => {
-            item.innerHTML = '1200₴';
+            item.innerHTML = '120$';
         })
 
         const oldFamilyConsults = document.querySelectorAll('[data-family-old-price]') 
         oldFamilyConsults.forEach(item => {
-            item.innerHTML = '1600₴';
+            item.innerHTML = '160$';
         })
         
         // Дитячі консультації нова / закреслена
 
         const childrenConsults = document.querySelectorAll('[data-children-price]') 
         childrenConsults.forEach(item => {
-            item.innerHTML = '1000₴';
+            item.innerHTML = '50$';
         })
 
         const oldChildrenConsults = document.querySelectorAll('[data-children-old-price]') 
         oldChildrenConsults.forEach(item => {
-            item.innerHTML = '1400₴';
-        })
-        
-        // Надія Лобас нова / стара ціна
-
-        const lobasPrice = document.querySelectorAll('[data-lobas-price]') 
-        lobasPrice.forEach(item => {
-            item.innerHTML = '400₴';
-        })
-        
-        const oldLobasPrice = document.querySelectorAll('[data-lobas-old-price]') 
-        oldLobasPrice.forEach(item => {
-            item.innerHTML = '1000₴';
-        })
-        
-        // Меланія Горошенко нова / стара ціна 
-
-        const goroshenkoPrice = document.querySelectorAll('[data-melania-price]') 
-        goroshenkoPrice.forEach(item => {
-            item.innerHTML = '400₴';
-        })
-
-        const oldGoroshenkoPrice = document.querySelectorAll('[data-melania-old-price]') 
-        oldGoroshenkoPrice.forEach(item => {
-            item.innerHTML = '1000₴';
-        })
-        
-        // Уляна Давид нова / стара ціна
-
-        const davydPrice = document.querySelectorAll('[data-davyd-price]') 
-        davydPrice.forEach(item => {
-            item.innerHTML = '400₴';
-        })
-
-        const oldDavydPrice = document.querySelectorAll('[data-davyd-old-price]') 
-        oldDavydPrice.forEach(item => {
-            item.innerHTML = '1000₴';
-        })
-
-        // Валерія Петерс нова / стара ціна
-
-        const petersPrice = document.querySelectorAll('[data-peters-price]') 
-        petersPrice.forEach(item => {
-            item.innerHTML = '400₴';
-        })
-
-        const oldPetersPrice = document.querySelectorAll('[data-peters-old-price]') 
-        oldPetersPrice.forEach(item => {
-            item.innerHTML = '1000₴';
-        })
-
-        // Валерія Шайнікова нова / стара ціна
-
-        const shainikovaPrice = document.querySelectorAll('[data-shainikova-price]') 
-        shainikovaPrice.forEach(item => {
-            item.innerHTML = '400₴';
-        })
-
-        const oldShainikovaPrice = document.querySelectorAll('[data-shainikova-old-price]') 
-        oldShainikovaPrice.forEach(item => {
-            item.innerHTML = '1000₴';
-        })
-
-        // Тетяна стольнікова нова / стара ціна
-
-        const stolnikovaPrice = document.querySelectorAll('[data-stolnikova-price]') 
-        stolnikovaPrice.forEach(item => {
-            item.innerHTML = '400₴';
-        })
-
-        const oldStolnikovaPrice = document.querySelectorAll('[data-stolnikova-old-price]') 
-        oldStolnikovaPrice.forEach(item => {
-            item.innerHTML = '800₴';
+            item.innerHTML = '80$';
         })
     })
 
@@ -295,7 +232,7 @@ $(document).ready(function () {
 
             type: "POST",
 
-            url: "./teleg.php",
+            url: "teleg.php",
 
             data: $(this).serialize()
 
@@ -306,7 +243,7 @@ $(document).ready(function () {
 
             $('form').trigger("reset");
 
-            window.location.href = 'https://goroshenko.com.ua/thanks';
+            window.location.href = 'https://test.goroshenko.com.ua/thanks';
 
         });
 

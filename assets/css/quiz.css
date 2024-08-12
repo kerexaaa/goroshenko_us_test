@@ -6,8 +6,8 @@ html {
 }
 
 .overflow__after div img {
-    max-height: 500px;
-    max-width: 500px;
+    max-height: 375px;
+    max-width: 375px;
 }
 
 .header {
@@ -137,7 +137,7 @@ main {
 
 .card__wrapper {
     background: rgba(225, 238, 249, 1);
-    padding-bottom: 36px;
+    padding-bottom: 16px;
     border-radius: 35px;
 }
 
@@ -146,7 +146,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 76px 103px 10px 103px;
+    padding: 76px 103px 0px 103px;
     max-width: 853px;
     max-height: 714px;
 }
@@ -295,7 +295,7 @@ main {
     border-radius: 35px;
     max-width: 800px;
     background: #98C5EB;
-    padding: 35px 80px;
+    padding: 20px 80px;
 }
 
 .stats-title {
@@ -765,7 +765,7 @@ main {
         width: 97%;
         display: flex;
         align-items: center;
-        height: 80vh;
+        height: calc(100vh - 79px);
         justify-content: flex-end;
         visibility: hidden;
         opacity: 0;
@@ -879,7 +879,7 @@ main {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 50px 60px 20px;
+        padding: 50px 60px 12px 60px;
         max-width: 853px;
         max-height: 714px;
     }
@@ -998,6 +998,17 @@ main {
 }
 
 @media (max-width: 767px) {
+
+    .stats-title {
+        color: #FFF;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
     .card__body-wrapper {
         display: flex;
         align-items: center;
@@ -1079,7 +1090,7 @@ main {
         max-width: 500px;
         border-radius: 35px;
         background: #98C5EB;
-        padding: 40px;
+        padding: 20px;
         width: 90%;
         margin: auto;
         max-width: 647px;
@@ -1098,7 +1109,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 0px;
+        margin-top: 20px;
         justify-content: flex-start;
         margin-right: 0;
         margin: 0;
@@ -1166,6 +1177,7 @@ main {
         text-align: center;
         font-family: Inter;
         font-size: 18px;
+        padding: unset;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
